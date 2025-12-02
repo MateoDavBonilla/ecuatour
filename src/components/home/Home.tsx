@@ -1,39 +1,43 @@
+"use client";
+
 import AboutSection from "../AboutSection";
 import FeaturedTours from "./FeaturedTours";
 import HeroCarousel from "./HeroCarousel";
 import Metrics from "./Metrix";
 import Testimonials from "./Testimonials";
-
+import { useI18n } from "@/components/I18nProvider";
 
 export default function Home() {
-    return (
-        <main className="flex flex-col gap-10 pb-16">
-            {/* HERO */}
-            <section className="bg-white rounded-3xl shadow-sm p-4">
-                <HeroCarousel />
-            </section>
+  const { t } = useI18n();
 
-            {/* MÉTRICAS */}
-            <Metrics />
+  return (
+    <main className="flex flex-col gap-10 pb-16">
+      {/* HERO */}
+      <section className="bg-white rounded-3xl shadow-sm p-4">
+        <HeroCarousel />
+      </section>
 
-            {/* TOURS DESTACADOS */}
-            <FeaturedTours />
+      {/* MÉTRICAS */}
+      <Metrics />
 
-            {/* SOBRE NOSOTROS */}
-            <AboutSection />
+      {/* TOURS DESTACADOS */}
+      <FeaturedTours />
 
-            {/* TESTIMONIOS */}
-            <Testimonials />
+      {/* SOBRE NOSOTROS */}
+      <AboutSection />
 
-            {/* CTA FINAL */}
-            <div className="pt-2">
-                <a
-                    href="/reservas"
-                    className="block w-full rounded-full bg-[var(--primary)] py-4 text-center text-xl font-bold text-white hover:bg-[var(--primary-dark)]"
-                >
-                    Reserva tu experiencia ahora
-                </a>
-            </div>
-        </main>
-    );
+      {/* TESTIMONIOS */}
+      <Testimonials />
+
+      {/* CTA FINAL */}
+      <div className="pt-2">
+        <a
+          href="/reservas"
+          className="block w-full rounded-full bg-[var(--primary)] py-4 text-center text-xl font-bold text-white hover:bg-[var(--primary-dark)]"
+        >
+          {t("home.cta.final")}
+        </a>
+      </div>
+    </main>
+  );
 }

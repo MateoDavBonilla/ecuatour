@@ -1,17 +1,19 @@
 "use client";
 
 import CountUp from "./CountUp";
-
-
-const stats = [
-  { value: 4.8, label: "EN MÁS DE 800 VIAJES", suffix: "/5", decimals: 1 },
-  { value: 25, label: "AÑOS DE EXPERIENCIA", prefix: "+", decimals: 0 },
-  { value: 25, label: "DESTINOS DISPONIBLES", prefix: "+", decimals: 0 },
-];
+import { useI18n } from "@/components/I18nProvider";
 
 export default function Metrics() {
+  const { t } = useI18n();
+
+  const stats = [
+    { value: 4.8, label: t("home.metrics.tripsLabel"), suffix: "/5", decimals: 1 },
+    { value: 25, label: t("home.metrics.experienceLabel"), prefix: "+", decimals: 0 },
+    { value: 25, label: t("home.metrics.destinationsLabel"), prefix: "+", decimals: 0 },
+  ];
+
   return (
-    <section className="grid gap-5 md:gap-20 md:grid-cols-3 ml-20 mr-20 ">
+    <section className="grid gap-5 md:gap-20 md:grid-cols-3 ml-20 mr-20">
       {stats.map((stat, i) => (
         <div
           key={i}
