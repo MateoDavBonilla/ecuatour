@@ -18,7 +18,7 @@ export default function Testimonials() {
   return (
     <section className="bg-white rounded-3xl shadow-sm px-6 py-10 space-y-10">
       <h2 className="text-3xl font-bold text-center">
-        {t("home.testimonials.title")}
+        {t("home.sections.testimonialsTitle")}
       </h2>
 
       <Swiper

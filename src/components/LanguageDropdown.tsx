@@ -31,7 +31,7 @@ export function LanguageDropdown() {
       <button
         type="button"
         onClick={toggle}
-        className="inline-flex items-center gap-1 border-none bg-white px-3 text-sm text-slate-700 hover:text-emerald-600"
+        className="inline-flex items-center gap-1 border-none md:px-3 text-sm text-slate-700 hover:text-emerald-600"
       >
         {current.label}
         <span className="text-[10px]">▼</span>
