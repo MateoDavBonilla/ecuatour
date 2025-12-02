@@ -13,7 +13,7 @@ export default function AboutSection() {
             <div className="absolute inset-0 pointer-events-none md:h-150 md:mt-5">
 
                 <Image
-                    src="/images/Ecuador.png"
+                    src="/images/ecuador.png"
                     alt="Mapa de Ecuador"
                     fill
                     className="object-contain opacity-25 md:translate-x-[-10%] md:translate-y-[-5%]"
