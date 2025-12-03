@@ -7,7 +7,7 @@ import { useI18n } from "@/components/I18nProvider";
 const slides = [
   {
     id: 1,
-    src: "/images/guayaquil/tour-guayaquil.jpg",
+    src: "/images/tours/guayaquil/tour-guayaquil.jpg",
     alt: "Guayaquil",
   },
   {
@@ -17,7 +17,7 @@ const slides = [
   },
   {
     id: 3,
-    src: "/images/cuenca/tour-cuenca.webp",
+    src: "/images/tours/cuenca/tour-cuenca.webp",
     alt: "Cuenca",
   },
 ];
