@@ -29,7 +29,7 @@ export function I18nProvider({ children }: { children: ReactNode }) {
   useEffect(() => {
     if (typeof window === "undefined") return;
     const stored = window.localStorage.getItem(STORAGE_KEY) as Language | null;
-    if (stored === "es" || stored === "en") {
+    if (stored === "es" || stored === "en" || stored === "de") {
       setLangState(stored);
     }
   }, []);

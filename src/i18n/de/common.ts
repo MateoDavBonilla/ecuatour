@@ -17,4 +17,9 @@ export const common = {
     copyright:
       "© 2025 Reiseagentur · Alle Rechte vorbehalten.",
   },
+    languages: {
+    es: "Spanisch",
+    en: "Englisch",
+    de: "Deutsch",
+  },
 };

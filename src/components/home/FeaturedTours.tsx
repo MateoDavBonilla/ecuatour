@@ -3,16 +3,19 @@
 import { useState } from "react";
 import Image from "next/image";
 import { useI18n } from "@/components/I18nProvider";
-import { featuredTours } from "@/lib/content/featuredTours";
+import { tours } from "@/lib/content/tours";
 
 export default function FeaturedTours() {
+    const { lang, t } = useI18n();
+
+    const featuredTours = tours.filter((tour) => tour.isFeatured);
     const [selectedIndex, setSelectedIndex] = useState(0);
-    const { t, lang } = useI18n();
     const selectedTour = featuredTours[selectedIndex];
     const selectedContent = selectedTour.locales[lang];
 
     return (
         <section className="bg-white rounded-3xl shadow-sm md:px-6 py-7">
+
             <h2 className="mb-6 text-xl md:text-4xl font-bold text-slate-900 ml-10">
                 {t("home.tours.sectionTitle")}
             </h2>
@@ -84,8 +87,8 @@ export default function FeaturedTours() {
                                 type="button"
                                 onClick={() => setSelectedIndex(idx)}
                                 className={`whitespace-nowrap rounded-full border px-3 py-1 text-xs font-semibold transition-colors ${idx === selectedIndex
-                                        ? "bg-emerald-600 text-white border-emerald-600"
-                                        : "bg-white text-slate-700 border-slate-200"
+                                    ? "bg-emerald-600 text-white border-emerald-600"
+                                    : "bg-white text-slate-700 border-slate-200"
                                     }`}
                             >
                                 {tour.city}
@@ -96,8 +99,8 @@ export default function FeaturedTours() {
                     {/* Botón amarillo */}
                     <div>
                         <a
-                            href={`/tours/${selectedTour.slug}`}
-                            className="inline-flex rounded-full bg-[#f9b233] px-10 py-2 text-xs font-semibold text-slate-900 hover:bg-[#f7a71b] transition-colors"
+                            href={`/tours`}
+                            className="inline-flex rounded-full bg-[#f9b233] px-10 py-2 text-xs font-semibold text-slate-900 hover:bg-[#f7a71b] hover:translate-y-[2px] shadow-md transition-colors"
                         >
                             {t("home.tours.moreInfo")}
                         </a>

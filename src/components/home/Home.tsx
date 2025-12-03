@@ -33,7 +33,7 @@ export default function Home() {
       <div className="pt-2">
         <a
           href="/reservas"
-          className="block w-full rounded-full bg-[var(--primary)] py-4 text-center text-xl font-bold text-white hover:bg-[var(--primary-dark)]"
+          className="block w-full rounded-full bg-[var(--primary)] py-4 text-center text-xl font-bold text-white hover:bg-[var(--primary-dark)] hover:translate-y-[2px] shadow-md"
         >
           {t("home.cta.final")}
         </a>

@@ -128,7 +128,7 @@ export default function HeroCarousel() {
         {/* BOTÓN VERDE INFERIOR */}
         <a
           href="/tours"
-          className="w-full max-w-xs sm:max-w-sm md:max-w-full rounded-full bg-emerald-600 py-2.5 text-center text-sm font-semibold text-white hover:bg-emerald-700"
+          className="w-full max-w-xs sm:max-w-sm md:max-w-full rounded-full bg-emerald-600 py-2.5 text-center text-sm font-semibold text-white hover:bg-emerald-700 hover:translate-y-[2px] shadow-md"
         >
           {t("home.hero.cta")}
         </a>

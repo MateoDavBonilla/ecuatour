@@ -17,4 +17,9 @@ export const common = {
     email: "agency@ecuatour.com",
     copyright: "© 2025 Travel Agency · All rights reserved.",
   },
+  languages: {
+    es: "Spanish",
+    en: "English",
+    de: "German",
+  },
 };
